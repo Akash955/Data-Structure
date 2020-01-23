@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[20],n,ins,p,i,j,temp;
+    cout<<"enter the number of array element"<<endl;
+    cin>>n;
+    cout<<"enter array element"<<endl;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp  =a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+        }
+        cout<<"after sorting"<<a[i]<<endl;
+
+	}
+
+    cout<<"enter a number you want to insert"<<endl;
+    cin>>ins;
+    if(ins!=a[i])
+    cin>>p;
+
+    {
+
+    for(i=n;i>p;i--)
+    {
+        a[i]=a[i-1];
+    }
+
+    }
+    else
+    {
+        cout<<"entered number is already here"<<endl;
+    }
+    a[p]=ins;
+    for(i=0;i<n+1;i++)
+    {
+
+        cout<<a[i];
+
+    }
+
+
+}
